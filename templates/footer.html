@@ -1,0 +1,138 @@
+   <!-- Footer Section -->
+        <div class="footer_section">
+            <div class="wrapper">
+                <div class="footer_sec_outer">
+                    <div class="footer_sec_inner">
+                        <div class="footer_sec_content footer_block01">
+                            <div class="footer_sec_logo">
+                                <img src="/static/images/footer-logo.svg" alt="logo">
+                            </div>
+                            <div class="footer_sec_copyright">
+                                <p>&copy; 2026, Billie Jane's Hats</p>
+                            </div>
+                        </div>
+                        <div class="footer_sec_content">
+                            <div class="footer_content_inner">
+                                <div class="footer_top_scroll_btn">
+                                    <a href="#" class="active">Back to Top</a>
+                                </div>
+                                <ul>
+                                    <li><a href="#">OUR HATS</a></li>
+                                    <li><a href="#">ABOUT US</a></li>
+                                    <li><a href="#">CONTACT US</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer_sec_content">
+                            <div class="footer_content_inner">
+                                <ul>
+                                    <li><a href="#">Refund policy</a></li>
+                                    <li><a href="#">Privacy policy</a></li>
+                                    <li><a href="#">Terms of service</a></li>
+                                    <li><a href="#">Shipping policy</a></li>
+                                    <li><a href="#">Contact information</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="search_bar">
+        <div class="search_bar_inner">
+            <div class="wrapper">
+                <div class="search_bae_inner">
+                    <div class="close_outer">
+                        <div class="close_btn"><img src="/static/images/cross-icon.svg" alt="cross icon"></div>
+                    </div>
+                    <div class="f_outer">
+                        <h3>Start typing and press Enter to search</h3>
+                        <form method="get" action="">
+                            <input type="text" class="search_field" name="s" placeholder="Search Entire Store...">
+                            <input type="submit" name="" value="" class="sbtn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="/static/js/jquery-3.7.1.min.js"></script>
+    <script src="/static/js/site_functions.js"></script>
+    <script src="/static/js/jquery.matchHeight-min.js"></script>
+    <script>
+        $ = jQuery;
+        // header  menu
+        $(document).ready(function () {
+            $(".nav-menu").append('<div class="cross_button afclr"><a><i class="m_close_icon" aria-hidden="true"></i></a></div>');
+            $(".cross_button").click(function () {
+                $(".nav-menu").removeClass("state-active");
+                $(".overlay").removeClass("active");
+                $("body").removeClass('no_overflow');
+                $(".cross_button").closest(".body_shift").parent().removeClass("no_overflow");
+            });
+        });
+        // match height 
+        $(function () {
+            $('.shop_coll_box_btn').matchHeight();
+            $('.new_pro_box_title').matchHeight();
+        });
+
+        $(document).ready(function () {
+            $('.find_hat_block ul li').on('click', function () {
+                $('.find_hat_block ul li').removeClass('active');
+                $(this).addClass('active');
+                $('.find_hat_content_inner').hide();
+
+                var activeTab = $(this).find('a').attr('href');
+                $(activeTab).fadeIn();
+                return false;
+            });
+
+        });
+    </script>
+    <script>
+        $(document).ready(function (e) {
+            $(".search_icon a").click(function (e) {
+                $(".search_bar").addClass("active");
+                $("body").addClass("overlay_search");
+                $("body").attr("style", "overflow:hidden;");
+            });
+            $(".close_btn").click(function (e) {
+                $(".search_bar").removeClass("active");
+                $("body").removeClass("overlay_search");
+                $("body").removeAttr("style", "overflow:hidden;");
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    $('.sticky_header').addClass('header_is_sticky');
+                } else {
+                    $('.sticky_header').removeClass('header_is_sticky');
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

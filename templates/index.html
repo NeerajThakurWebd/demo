@@ -1,0 +1,318 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- banner -->
+<div class="banner_section afclr">
+  <img src="/static/images/hero_banner_img.webp" alt="banner" />
+  <div class="banner_section_inner afclr">
+    <div class="wrapper afclr">
+      <div class="banner_box">
+        <h1>Discover Your New favorite cap</h1>
+        <p>We are so happy you are here!</p>
+        <a href="#5" class="site_btn">find your favess</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Shop by Collection -->
+<div class="shop_coll afclr">
+  <div class="wrapper">
+    <div class="shop_coll_inner">
+      <h2 class="site_title">Shop by Collection</h2>
+      <div class="shop_coll_container">
+        <div class="shop_coll_box">
+          <div>
+            <a href="#5">
+              <div class="shop_coll_box_img">
+                <img src="/static/images/shop_coll_img1.webp" alt="" />
+              </div>
+              <div class="shop_coll_box_btn">
+                <h3>Trucker Hats</h3>
+              </div>
+            </a>
+            <div class="paragraph_pra shop_coll_content">
+              <p>Our collection of foam front Fun Truckers has a hat for every occasion! Lake, vacation, mudding, just
+                plain funny! These truckers will make you smile!</p>
+            </div>
+          </div>
+        </div>
+        <div class="shop_coll_box">
+          <div>
+            <a href="#5">
+              <div class="shop_coll_box_img">
+                <img src="/static/images/shop_coll_img2.webp" alt="" />
+              </div>
+              <div class="shop_coll_box_btn">
+                <h3>Crisscross Ponytail Truckers</h3>
+              </div>
+            </a>
+            <div class="paragraph_pra shop_coll_content">
+              <p>Our collection of foam front Fun Truckers has a hat for every occasion! Lake, vacation, mudding, just
+                plain funny! These truckers will make you smile!</p>
+            </div>
+          </div>
+        </div>
+        <div class="shop_coll_box">
+          <div>
+            <a href="#5">
+              <div class="shop_coll_box_img">
+                <img src="/static/images/shop_coll_img3.webp" alt="" />
+              </div>
+              <div class="shop_coll_box_btn">
+                <h3>Trucker Chain</h3>
+              </div>
+            </a>
+            <div class="paragraph_pra shop_coll_content">
+              <p>Our collection of foam front Fun Truckers has a hat for every occasion! Lake, vacation, mudding, just
+                plain funny! These truckers will make you smile!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shol_coll_btn">
+        <a href="#5" class="site_btn">View all collections</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- new Product in shop -->
+<div class="new_pro_sec">
+  <div class="wrapper afclr">
+    <div class="new_pro_inner">
+      <h2 class="site_title">New to the Shop</h2>
+      <div class="new_pro_container">
+        {% for product in product %}
+        <div class="new_pro_box">
+          <div class="new_pro_box_img">
+            <a href="#5"><img src="/static/{{ product.product_image }}" alt="{{ product.product_name }}" /></a>
+          </div>
+          <div class="product_info_tt">
+            <a href="#5" class="new_pro_box_title">{{ product.product_name }}</a>
+            {% comment %} <p>{{ product.product_des|upper|safe|slice:'0:2' }}</p> {% endcomment %}
+            <p>{{ product.product_des|upper|safe }}</p>
+            <p class="new_pro_box_prize">{{ product.product_prize }}</p>
+            <a href="/product/{{ product.id }}" class="site_btn new_pro_box_btn">Add to Cart</a>
+          </div>
+        </div>
+        {% endfor %}
+
+        {% comment %} <div class="new_pro_box">
+          <div class="new_pro_box_img">
+            <a href="#5"><img src="/static/images/new_pro_img2.webp" alt="" /></a>
+          </div>
+          <div class="product_info_tt">
+            <a href="#5" class="new_pro_box_title">Dance Moms Club Trucke</a>
+            <p class="new_pro_box_prize">$49.00 USD</p>
+            <a href="#5" class="site_btn new_pro_box_btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="new_pro_box">
+          <div class="new_pro_box_img">
+            <a href="#5"><img src="/static/images/new_pro_img3.webp" alt="" /></a>
+          </div>
+          <div class="product_info_tt">
+            <a href="#_" class="new_pro_box_title">Game Day Trucker</a>
+            <p class="new_pro_box_prize">$57.00 USD</p>
+            <a href="#_" class="site_btn new_pro_box_btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="new_pro_box">
+          <div class="new_pro_box_img">
+            <a href="#5"><img src="/static/images/new_pro_img4.webp" alt="" /></a>
+          </div>
+          <div class="product_info_tt">
+            <a href="#_" class="new_pro_box_title">Game Day Trucker</a>
+            <p class="new_pro_box_prize">$55.00 USD</p>
+            <a href="#_" class="site_btn new_pro_box_btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="new_pro_box">
+          <div class="new_pro_box_img">
+            <a href="#5"><img src="/static/images/new_pro_img5.webp" alt="" /></a>
+          </div>
+          <div class="product_info_tt">
+            <a href="#_" class="new_pro_box_title">Tacos And Margs Trucker</a>
+            <p class="new_pro_box_prize">$29.95.00 USD</p>
+            <a href="#5" class="site_btn new_pro_box_btn">Add to Cart</a>
+          </div>
+        </div>
+        <div class="new_pro_box">
+          <div class="new_pro_box_img">
+            <a href="#5"><img src="/static/images/new_pro_img6.webp" alt="" /></a>
+          </div>
+          <div class="product_info_tt">
+            <a href="#_" class="new_pro_box_title">Coffee Snob Multi Patch Truck</a>
+            <p class="new_pro_box_prize">$60.00 USD</p>
+            <a href="#_" class="site_btn new_pro_box_btn">Add to Cart</a>
+          </div>
+        </div> {% endcomment %}
+      </div>
+      <div class="new_pro_btn">
+        <a href="#5" class="site_btn">FIND YOUR FAVES</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- main product section -->
+<div class="main_pro_sec">
+  <img src="/static/images/main_product_back_img.webp" alt="" class="main_pro_back_img" />
+  <div class="wrapper">
+    <div class="main_pro_inner">
+      <div class="main_pro_box">
+        <div class="main_pro_left">
+          <div class="main_pro_img">
+            <img src="/static/images/main_product_img1.webp" alt="" />
+          </div>
+        </div>
+        <div class="main_pro_right">
+          <div class="game_trucker_ctc">
+            <h3 class="main_pro_title">
+              Game Day
+              <br />
+              Trucker
+            </h3>
+            <div class="paragraph_pra main_pro_content">
+              <p>Score big with the Game Day Trucker! This great trucker will have you looking and feeling beautiful!
+                You'll be the best looking one at the game! Don't miss out on this game-day essential!</p>
+            </div>
+            <h4 class="main_pro_prize">$57.00 USD</h4>
+            <a href="#5" class="main_pro_more_btn">View more</a>
+            <div class="main_pro_btn">
+              <a href="#5" class="site_btn">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Find Hat Section -->
+<div class="find_hat_section">
+  <div class="wrapper">
+    <div class="find_hat_section_inner">
+      <div class="find_hat_text paragraph_pra">
+        <h2 class="site_title find_hat_title">Find the Perfect Hat for You!</h2>
+        <p>We create hats for everyone and know you’ll find one you love! If it’s not a perfect fit, just let us know—we
+          can customize any hat with any patch. We’re here to make your perfect hat!</p>
+      </div>
+      <div class="find_hat_block">
+        <ul>
+          <li>
+            <a href="#tab1">Trucker Hats</a>
+          </li>
+          <li class="active">
+            <a href="#tab2">Crisscross Ponytail Truckers</a>
+          </li>
+          <li>
+            <a href="#tab3">Trucker Chains</a>
+          </li>
+        </ul>
+        <div class="find_hat_content_block">
+          <div id="tab1" class="find_hat_content_inner active">
+            <p>Our Criss Cross Ponytail Truckers have a cotton distressed front, mesh back, with a criss cross elastic
+              back that allows you to wear your hair high, low or in between.</p>
+            <p>These fantastic truckers have an adjustable velcro closure in back. One size fits most!</p>
+            <div class="find_hat_link">
+              <a href="#">See Collection</a>
+            </div>
+          </div>
+          <div id="tab2" class="find_hat_content_inner">
+            <p>Our Criss Cross Ponytail Truckers have a cotton distressed front, mesh back, with a criss cross elastic
+              back that allows you to wear your hair high, low or in between.</p>
+            <p>These fantastic truckers have an adjustable velcro closure in back. One size fits most!</p>
+            <div class="find_hat_link">
+              <a href="#">See Collection</a>
+            </div>
+          </div>
+          <div id="tab3" class="find_hat_content_inner">
+            <p>Our Criss Cross Ponytail Truckers have a cotton distressed front, mesh back, with a criss cross elastic
+              back that allows you to wear your hair high, low or in between.</p>
+            <p>These fantastic truckers have an adjustable velcro closure in back. One size fits most!</p>
+            <div class="find_hat_link">
+              <a href="#">See Collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Behind the Scenes section -->
+<div class="behind_scenes_section">
+  <div class="wrapper">
+    <div class="behind_scenes_inner">
+      <div class="behind_scenes_left_block">
+        <div class="behind_scenes_l_img">
+          <img src="/static/images/behind_scenes_left_img.webp" alt="img" />
+        </div>
+      </div>
+      <div class="behind_scenes_content_block">
+        <div class="behind_scenes_content">
+          <h2 class="site_title">Behind the Scenes</h2>
+          <div class="behind_scenes_info paragraph_pra">
+            <p>Here at Billie Jane's we love designing and making our embroidered patches. Every patch is designed and
+              custom made in house. We believe that's what makes our hats different from the rest.</p>
+            <ul>
+              <li>Each hat is made-to-order, crafted just for you!</li>
+              <li>We know a hat can be more than just an accessory—it can tell a story, bring a smile, and be frosting
+                to your outfit.</li>
+              <li>We love hearing from you, if you have a great hat or Koozie idea we would love to hear it. Share your
+                stories with us!</li>
+            </ul>
+          </div>
+          <div class="behind_scenes_img">
+            <img src="/static/images/behind_scenes_info_img.webp" alt="img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- News letter Section -->
+<div class="newsletter_section">
+  <div class="wrapper">
+    <div class="newsletter_sec_outer">
+      <div class="newsletter_sec_inner">
+        <div class="newsletter_content_box newsletter_inner_b newsletter_inner_b1">
+          <div class="newsletter_title">
+            <h3>We would love for you to share! We only send good stuff and good deals...promise!</h3>
+          </div>
+          <div class="newsletter_content_form">
+            <input type="email" class="sign_up_input" placeholder="Email" />
+            <input type="submit" class="sign_up_btn" value="" />
+          </div>
+        </div>
+        <div class="newsletter_inner_b newsletter_inner_b2">
+          <div class="contact_info_inner">
+            <div class="newsletter_title">
+              <h3>Let’s Chat</h3>
+            </div>
+            <div class="news_contact_info">
+              <p>Owner: Jennifer</p>
+              <p>
+                Phone: <a href="tel:469-751-8418">469-751-8418</a>
+              </p>
+              <p>
+                Email: <a href="mailto:Hello@billiejanes.com">Hello@billiejanes.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter_inner_b newsletter_inner_b3">
+          <div class="contact_info_inner">
+            <div class="newsletter_title">
+              <h3>Let’s Connect</h3>
+            </div>
+            <div class="news_contact_info">
+              <div class="social_media_box">
+                <a href="#"><img src="/static/images/facebook.svg" alt="facebook" /></a>
+                <a href="#"><img src="/static/images/instagram.svg" alt="instagram" /></a>
+                <a href="#"><img src="/static/images/linkedin.svg" alt="linkedin" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

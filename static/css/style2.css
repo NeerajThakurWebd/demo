@@ -1,0 +1,416 @@
+/* ///// find hat section ///// */
+
+.find_hat_section {
+    padding: 120px 0;
+
+}
+
+.find_hat_text {
+    margin-bottom: 40px;
+}
+
+
+.find_hat_block ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.find_hat_block ul li {
+
+    display: inline-block;
+}
+
+.find_hat_block ul li a {
+    display: block;
+    font-family: 'Futura PT';
+    font-size: 24px;
+    line-height: 1.2em;
+    color: var(--tertiary);
+    font-weight: 500;
+    padding: 20px 25px;
+    background-color: #c8dbd9;
+}
+
+.find_hat_block ul li.active a {
+    background-color: #91b8b3;
+    color: #fff;
+
+}
+
+
+.find_hat_content_block {
+    background-image: url('../images/find_hat_img.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 555px;
+    height: 100%;
+    position: relative;
+}
+
+.find_hat_content_block::after {
+    background-color: rgba(30, 47, 45, 0.75);
+    position: absolute;
+    content: '';
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 420px;
+
+    z-index: 0;
+}
+
+.find_hat_content_inner {
+    position: relative;
+    z-index: 1;
+    max-width: 420px;
+    padding: 40px;
+    display: none;
+}
+
+.find_hat_content_inner.active {
+    display: block;
+}
+
+.find_hat_content_inner p {
+
+
+    font-family: 'Futura PT';
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.2em;
+    padding-bottom: 40px;
+
+}
+
+.find_hat_content_inner a {
+
+    color: var(--secondary);
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+
+}
+
+/* ///// find hat section end ///// */
+
+
+/* ///// Behind the Scenes section ///// */
+
+
+
+.behind_scenes_section {
+    padding: 120px 0;
+    background-color: var(--secondary);
+}
+
+.behind_scenes_inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.behind_scenes_left_block {
+    width: 37%;
+}
+
+.behind_scenes_l_img {
+    display: flex;
+
+}
+
+.behind_scenes_l_img img {
+    display: block;
+    width: 100%;
+}
+
+.behind_scenes_content_block {
+    width: 63%;
+    padding-left: 80px;
+}
+
+.behind_scenes_info ul {
+    padding-left: 40px;
+}
+
+.behind_scenes_info ul li {
+    position: relative;
+    font-family: 'Futura PT';
+    font-size: 20px;
+    line-height: 1.2em;
+    color: var(--tertiary);
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.behind_scenes_info ul li::after {
+
+    position: absolute;
+    content: '';
+    left: -40px;
+    top: -1px;
+    background-image: url('../images/list_bullet.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+}
+
+.behind_scenes_content h2 {
+    margin-bottom: 20px;
+}
+
+.behind_scenes_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.behind_scenes_img img {
+    display: block;
+    width: 100%;
+}
+
+/* ///// Behind the Scenes section end///// */
+
+
+
+/* /////// News letter Section//////// */
+
+
+.newsletter_section {
+
+    background-color: var(--primary);
+    padding: 80px 0;
+}
+
+.newsletter_sec_inner {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+.newsletter_inner_b {
+    padding: 0 20px;
+}
+
+.newsletter_inner_b1 {
+
+    width: 40%;
+
+}
+
+.newsletter_inner_b2 {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.newsletter_inner_b3 {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.newsletter_title h3 {
+
+    font-family: 'Futura PT';
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #fff;
+
+}
+
+.newsletter_content_form {
+    display: flex;
+    margin-top: 50px;
+    background-color: #fff;
+    padding: 20px 30px;
+
+}
+
+.newsletter_inner_b1 .newsletter_title h3 {
+
+    padding-right: 30px;
+}
+
+.sign_up_input {
+    color: var(--primary);
+    font-size: 30px;
+    font-style: normal;
+    font-family: 'Futura PT';
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 0;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    width: calc(100% - 50px);
+    padding-right: 25px;
+}
+
+.sign_up_input::placeholder {
+    color: var(--primary);
+    text-decoration: underline;
+
+}
+
+.sign_up_btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 0px;
+    width: 50px;
+    height: auto;
+    background-image: url('../images/newsletter-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+
+.news_contact_info p,
+.news_contact_info a {
+
+    font-size: 26px;
+    font-style: normal;
+    font-family: 'Futura PT';
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+
+}
+
+.news_contact_info {
+    margin-top: 40px;
+
+}
+
+.social_media_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.social_media_box a {
+    display: inline-block;
+
+}
+
+.social_media_box a img {
+    display: block;
+    width: 38px;
+    height: 38px;
+}
+
+/* /////// News letter Section end//////// */
+
+
+
+/* /////// Footer Section//////// */
+
+
+
+.footer_section {
+
+    padding: 120px 0 80px;
+    background-color: #352f2f;
+}
+
+.footer_sec_inner {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+
+}
+
+.footer_sec_content {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.footer_content_inner {
+    display: block;
+}
+
+.footer_top_scroll_btn,
+.footer_content_inner ul li {
+    margin-bottom: 20px;
+
+}
+
+.footer_top_scroll_btn a,
+.footer_content_inner ul li a {
+    display: inline-block;
+    font-family: 'Futura PT';
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #fff;
+    transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    -moz-transition: .3s all ease;
+    -ms-transition: .3s all ease;
+    -o-transition: .3s all ease;
+}
+
+.footer_sec_copyright p {
+    font-family: 'Futura PT';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #fff;
+    margin-top: 40px;
+
+}
+
+.footer_top_scroll_btn a,
+.footer_content_inner ul li a:hover {
+    color: var(--primary);
+
+
+}
+
+.footer_content_inner ul li a.active {
+
+    color: var(--primary);
+}
+
+.footer_content_inner ul li:last-child {
+    margin: 0;
+}
+
+.footer_sec_content {
+    width: 25%;
+}
+
+.footer_block01 {
+    width: 50%;
+}
+
+.footer_sec_logo {
+    display: flex;
+    align-items: center;
+    width: 75%;
+
+}
+
+.footer_sec_logo img {
+    width: 100%;
+    display: block;
+}
+
+/* /////// Footer Section end//////// */
+
+
+
+@media screen and (max-width: 1550px) {}

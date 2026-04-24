@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="form_container">
+    <form method="post" aria-label="Contact form" action="{% url 'fromdata' %}">
+      {% csrf_token %}
+      <div class="contact_us_from_inner">
+        <div class="input_b_box">
+          <div class="input_b">
+            {% comment %} <input size="40" maxlength="400" class="fn_input" placeholder="Your Name*" value="" type="text" name="fname" /> {% endcomment %}contactfrom
+            {{ contactfrom }}
+          </div>
+          <div class="input_b">
+            <input size="40" maxlength="400" class="fn_input" placeholder="Phone No.*" value="" type="text" name="phone_number" />
+          </div>
+          <div class="input_b full_field_input">
+            <input size="40" maxlength="400" class="fn_input" placeholder="Email*" value="" type="email" name="email" />
+          </div>
+          <div class="input_b full_field_input">
+            <textarea cols="40" rows="10" maxlength="2000" class="fn_input fn_input_textarea" placeholder="Your Message" name="message"></textarea>
+          </div>
+        </div>
+        <div class="submit_fr_btn">
+          <div class="g-recaptcha-wrap">
+            <input class="has-spinner submit_btn site_btn" type="submit" value="SEND" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  {{ valueofname }}
+{% endblock %}

@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billie Jaen's</title>
+    <link rel="stylesheet" href="/static/css/style.css?{{ randomnum }}" />
+  </head>
+  <body>
+    <div class="outer_block">
+      <!-- header -->
+      <header>
+        <!-- sticky header -->
+        <div class="sticky_header afclr">
+          <div class="wrapper afclr">
+            <div class="sticky_header_inner afclr">
+              <div class="header_sec_inner">
+                <div class="header_sec_left">
+                  <div class="header_sec_logo">
+                    <a href="#"><img src="{% static 'images/billie-Jaen-logo.svg' %}" alt="Billie Jaen's" /></a>
+                  </div>
+                </div>
+                <div class="header_sec_right">
+                  <div class="header_sec_nav">
+                    <div class="menu_bar">
+                      <div class="site-menu afclr">
+                        <a href="javascript:void(1)" class="menu_expand afclr">
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                        </a>
+                        <ul class="nav-menu">
+                          <li class="current-menu-item {% if request.path == '/' %}active{% endif %} ">
+                            <a href="{% url 'home' %}">Home</a>
+                          </li>
+                          <li class="menu-item-has-children {% if request.path == '/about/' %}active{% endif %}">
+                            <a href="{% url 'about' %}">About Us</a>
+                            <ul class="sub-menu">
+                              <li>
+                                <a href="#">Product1</a>
+                              </li>
+                              <li class="menu-item-has-children">
+                                <a href="#">Product2</a>
+                                <ul class="sub-menu">
+                                  <li>
+                                    <a href="#">Product3</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">Product4</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">Product5</a>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="#">Product6</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="{% if request.path == '/faq/' %}active{% endif %}">
+                            <a href="{% url 'faq' %}">Faq</a>
+                          </li>
+                          <li>
+                            <a href="#">Revires</a>
+                          </li>
+                          <li class="{% if request.path == '/contact/' %}active{% endif %}">
+                            <a href="{% url 'contact' %}">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="header_btn">
+                      <a href="#" class="site_btn">Shop now</a>
+                    </div>
+                  </div>
+                  <div class="header_extra">
+                    <div class="header_search">
+                      <div class="search_icon">
+                        <a href="javascript:void(0)"><img class="header_search_img" src="/static/images/search_icon.svg" alt="" /></a>
+                      </div>
+                    </div>
+                    <div class="header_acoount">
+                      <a class="login_info" href="#5"><img class="header_acoount_img" src="/static/images/header_user.svg" alt="" /></a>
+                    </div>
+                    <div class="add_cart_top_r header-cart">
+                      <div class="login_box_content header-cart-inner">
+                        <a href="#5" class="shoping_cart_header" title="View your shopping cart">
+                          <div class="c_cart_icon">
+                            <div class="cart_fregment_in">
+                              <span class="cart_icon login_info">
+                                <img class="header_cart_img" src="/static/images/cart_icon.svg" alt="cart icon" />
+                                <span class="header-cart-count"><p>3</p></span>
+                              </span>
+                            </div>
+                          </div>
+                        </a>
+                        <ul class="site-header-cart menu list-unstyled">
+                          <li>
+                            <div class="widget woocommerce widget_shopping_cart">
+                              <div class="widget_shopping_cart_content">
+                                <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- top header sec -->
+        <div class="top_sec afclr">
+          <div class="wrapper afclr">
+            <div class="top_sec_inner">
+              <p>$4.95 flat rate for standard shipping. Free standard shipping on orders $75 and above</p>
+              <div class="top_sec_social t_hide_social_sm">
+                <a href="#5" target="_blank">
+                  <svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px" viewBox="0 0 512 512" xml:space="preserve">
+                    <g id="7935ec95c421cee6d86eb22ecd11b7e3">
+                      <path style="display: inline;" d="M283.122,122.174c0,5.24,0,22.319,0,46.583h83.424l-9.045,74.367h-74.379 c0,114.688,0,268.375,0,268.375h-98.726c0,0,0-151.653,0-268.375h-51.443v-74.367h51.443c0-29.492,0-50.463,0-56.302 c0-27.82-2.096-41.02,9.725-62.578C205.948,28.32,239.308-0.174,297.007,0.512c57.713,0.711,82.04,6.263,82.04,6.263 l-12.501,79.257c0,0-36.853-9.731-54.942-6.263C293.539,83.238,283.122,94.366,283.122,122.174z" fill="currentColor"></path>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#5" target="_blank">
+                  <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"></path>
+                    <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="currentColor"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"></path>
+                  </svg>
+                </a>
+                <a href="#5" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" version="1.1" width="800px" height="800px" viewBox="0 0 512 512" xml:space="preserve">
+                    <path d="M116.504,500.219V170.654H6.975v329.564H116.504   L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941   C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219   c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533   c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531   c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- header -->
+        <div class="header_sec">
+          <div class="wrapper">
+            <div class="header_sec_inner">
+              <div class="header_sec_left">
+                <!-- logo -->
+                <div class="header_sec_logo">
+                  <a href="#"><img src="{% static 'images/billie-Jaen-logo.svg' %}" alt="Billie Jaen's" /></a>
+                </div>
+              </div>
+              <div class="header_sec_right">
+                <!-- menu -->
+                <div class="header_sec_nav">
+                  <div class="menu_bar">
+                    <div class="site-menu afclr">
+                      <a href="javascript:void(1)" class="menu_expand afclr">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                      </a>
+                      {% comment %} {{ request.path }} {% endcomment %}
+                      <ul class="nav-menu">
+                        {% url 'home' as hurl %}
+                        {% url 'about' as ab %}
+                        <li class="current-menu-item {% if request.path == hurl %}active{% endif %} ">
+                          <a href="{{ hurl }}">Home</a>
+                        </li>
+                        <li class="menu-item-has-children {% if request.path == ab %}active{% endif %}">
+                          <a href="{{ ab }}">About Us</a>
+                          <ul class="sub-menu">
+                            <li>
+                              <a href="#">Product1</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                              <a href="#">Product2</a>
+                              <ul class="sub-menu">
+                                <li>
+                                  <a href="#">Product3</a>
+                                </li>
+                                <li>
+                                  <a href="#">Product4</a>
+                                </li>
+                                <li>
+                                  <a href="#">Product5</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="#">Product6</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="{% if request.path == '/faq/' %}active{% endif %}">
+                          <a href="{% url 'faq' %}">Faq</a>
+                        </li>
+                        <li>
+                          <a href="#">Revires</a>
+                        </li>
+                        <li class="{% if request.path == '/contact/' %}active{% endif %}">
+                          <a href="{% url 'contact' %}">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="header_btn">
+                    <a href="#" class="site_btn">Shop now</a>
+                  </div>
+                </div>
+                <div class="header_extra">
+                  <!-- search -->
+                  <div class="header_search">
+                    <div class="search_icon">
+                      <a href="javascript:void(0)"><img class="header_search_img" src="/static/images/search_icon.svg" alt="" /></a>
+                    </div>
+                  </div>
+                  <!-- account -->
+                  <div class="header_acoount">
+                    <a class="login_info" href="#5"><img class="header_acoount_img" src="/static/images/header_user.svg" alt="" /></a>
+                  </div>
+                  <!-- cart -->
+                  <div class="add_cart_top_r header-cart">
+                    <div class="login_box_content header-cart-inner">
+                      <a href="#5" class="shoping_cart_header" title="View your shopping cart">
+                        <div class="c_cart_icon">
+                          <div class="cart_fregment_in">
+                            <span class="cart_icon login_info">
+                              <img class="header_cart_img" src="/static/images/cart_icon.svg" alt="cart icon" />
+                              <span class="header-cart-count"><p>3</p></span>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                      <ul class="site-header-cart menu list-unstyled">
+                        <li>
+                          <div class="widget woocommerce widget_shopping_cart">
+                            <div class="widget_shopping_cart_content">
+                              <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>

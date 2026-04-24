@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .calc_container {
+      max-width: 800px;
+      margin: auto;
+      padding: 80px 0;
+    }
+    
+    .submit_btn {
+      margin-top: 30px;
+      padding: 10px 32px;
+      background-color: #66ca30;
+      color: #fff;
+    }
+    
+    .output_block {
+      margin-top: 30px;
+    }
+  </style>
+  <div class="calc_container">
+    <form method="post">
+      {% csrf_token %}
+
+      {{ contactfrom }}
+
+      <button type="submit" class="submit_btn" value="Calculate">Calculate</button>
+      <input type="text" placeholder="Output" class="fn_input output_block" value="{{ output }}" />
+    </form>
+  </div>
+{% endblock %}%
