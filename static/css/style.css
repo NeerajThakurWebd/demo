@@ -1496,7 +1496,7 @@ input[type="submit"].sbtn {
 
 .nav-menu li.active {
 
-    background: #f00;
+    background: rgb(0, 131, 68);
     color: #f1eded;
 }
 
